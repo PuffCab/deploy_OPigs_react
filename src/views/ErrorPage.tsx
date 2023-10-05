@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
-import { Navigate, useNavigate, useRouteError } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Navigate, useRouteError } from "react-router-dom";
 
 interface RouteErrorType {
   data: string;
@@ -17,10 +16,10 @@ function ErrorPage() {
 
   //!useNavigate hook
 
-  const navigateTo = useNavigate();
-  const goHome = () => {
-    navigateTo("/");
-  };
+  // const navigateTo = useNavigate();
+  // const goHome = () => {
+  //   navigateTo("/");
+  // };
 
   //! trying to build a delayed redirect
   const [redirect, setRedirect] = useState(false);

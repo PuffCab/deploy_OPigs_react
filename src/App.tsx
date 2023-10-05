@@ -3,10 +3,7 @@ import {
   createBrowserRouter,
   Route,
   RouterProvider,
-  Link,
   Outlet,
-  createHashRouter,
-  createMemoryRouter,
 } from "react-router-dom";
 import "./App.css";
 import Characters from "./views/Characters";
@@ -23,7 +20,6 @@ import { CharactersContextProvider } from "./context/CharactersContext";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CharactersWithCustomHook from "./components/CharactersWithCustomHook";
-import { app, auth, db } from "./config/firebaseConfig";
 import Register from "./views/Register";
 import Login from "./views/Login";
 import Chat from "./views/Chat";

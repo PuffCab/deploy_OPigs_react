@@ -6,6 +6,9 @@ export interface CharacterType {
   name: string;
   gender: string;
   image: string;
+  id: string;
+  species: string;
+  status: string;
 }
 
 export interface InfoType {

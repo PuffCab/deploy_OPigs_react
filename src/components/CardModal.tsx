@@ -1,6 +1,5 @@
-import React from "react";
 import { Button, Modal } from "react-bootstrap";
-import { CharacterType } from "../views/Characters";
+import { CharacterType } from "../types/customTypes";
 
 interface CardModalProps {
   show: boolean;

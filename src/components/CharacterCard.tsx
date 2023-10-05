@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../style/CharacterCardStyle.css";
 import { Button } from "react-bootstrap";
 import CardModal from "./CardModal";

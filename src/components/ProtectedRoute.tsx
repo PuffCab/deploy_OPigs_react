@@ -1,7 +1,6 @@
-import React, { ReactNode, useContext } from "react";
+import { ReactNode, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { Navigate } from "react-router-dom";
-import { isUserAuth } from "../utils/isUserAuth.js";
 import { useIsAuth } from "../hooks/useIsAuth.js";
 
 type ProtectedRouteProps = {

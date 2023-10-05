@@ -55,8 +55,8 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
       const registeredUser = userCredential.user;
       registeredUser;
     } catch (error) {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+      // const errorCode = error.code;
+      // const errorMessage = error.message;
       console.log("register went wrong :>> ", error);
     }
   };
@@ -72,7 +72,7 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
+        // const errorMessage = error.message;
         console.log("error :>> ", error);
         console.log("errorCode :>> ", errorCode);
       });
@@ -83,7 +83,7 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
-        const uid = user.uid;
+        // const uid = user.uid;
         console.log("user is still logged in");
         // console.log("uid :>> ", uid);
         // console.log("user :>> ", user);

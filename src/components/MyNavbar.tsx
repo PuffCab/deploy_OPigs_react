@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { CharactersContext } from "../context/CharactersContext";
 import { AuthContext } from "../context/AuthContext";
 import { Button } from "react-bootstrap";
 
 function MyNavbar() {
-  const { user, setUser, logout } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
   // console.log("user :>> ", user);
 
   return (

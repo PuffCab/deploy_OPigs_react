@@ -2,11 +2,10 @@ import {
   Timestamp,
   addDoc,
   collection,
-  getDocs,
   onSnapshot,
   query,
 } from "firebase/firestore";
-import React, { CSSProperties, useContext, useEffect, useState } from "react";
+import { CSSProperties, useContext, useEffect, useState } from "react";
 import { db } from "../config/firebaseConfig";
 import { Button } from "react-bootstrap";
 import { AuthContext } from "../context/AuthContext";
@@ -40,19 +39,19 @@ function Chat() {
   //in this example this is being done directly in the input. Otherwise, create a function.
 
   //1. Get documents from our Database
-  const getMessages = async () => {
-    const querySnapshot = await getDocs(collection(db, "chat"));
-    console.log("querySnapshot :>> ", querySnapshot);
-    const messagesArray: MessageType[] = [];
-    querySnapshot.forEach((doc) => {
-      console.log("message object :>> ", doc.data());
-      console.log(`${doc.id} => ${doc.data()}`);
-      // const messageObject = doc.data()
-      messagesArray.push(doc.data() as MessageType);
-    });
-    console.log("messagesArray :>> ", messagesArray);
-    setChatMessages(messagesArray);
-  };
+  // const getMessages = async () => {
+  //   const querySnapshot = await getDocs(collection(db, "chat"));
+  //   console.log("querySnapshot :>> ", querySnapshot);
+  //   const messagesArray: MessageType[] = [];
+  //   querySnapshot.forEach((doc) => {
+  //     console.log("message object :>> ", doc.data());
+  //     console.log(`${doc.id} => ${doc.data()}`);
+  //     // const messageObject = doc.data()
+  //     messagesArray.push(doc.data() as MessageType);
+  //   });
+  //   console.log("messagesArray :>> ", messagesArray);
+  //   setChatMessages(messagesArray);
+  // };
 
   const formatDate = (date: Timestamp | Date): string => {
     // console.log("date :>> ", typeof date);
@@ -91,7 +90,7 @@ function Chat() {
   //  get messages with live update
   const getMessagesLiveUpdate = () => {
     const q = query(collection(db, "chat"));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+    onSnapshot(q, (querySnapshot) => {
       const messagesArray: MessageType[] = [];
       querySnapshot.forEach((doc) => {
         messagesArray.push(doc.data() as MessageType);

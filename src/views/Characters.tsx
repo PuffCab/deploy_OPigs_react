@@ -2,7 +2,6 @@ import React, { ChangeEvent, useContext, useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import CardGrid from "../components/CardGrid";
 import { Button, Container, Row } from "react-bootstrap";
-import { CharacterType, InfoType } from "../types/customTypes";
 import { CharactersContext } from "../context/CharactersContext";
 
 function Characters() {

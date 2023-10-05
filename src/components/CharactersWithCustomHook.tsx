@@ -1,4 +1,3 @@
-import React from "react";
 import useMyfetch from "../hooks/useMyfetch";
 
 function CharactersWithCustomHook() {
@@ -6,9 +5,9 @@ function CharactersWithCustomHook() {
     "https://rickandmortyapi.com/api/character"
   );
   console.log("data :>> ", charactersData.data);
-  const { data, error, loading } = useMyfetch(
-    "https://jsonplaceholder.typicode.com/todos"
-  );
+  // const { data, error, loading } = useMyfetch(
+  //   "https://jsonplaceholder.typicode.com/todos"
+  // );
 
   return (
     <>

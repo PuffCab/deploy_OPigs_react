@@ -14,7 +14,7 @@ const initialContext = {
   characters: [
     {
       gender: "",
-      id: 0,
+      id: "",
       image: "",
       name: "",
       species: "",
@@ -50,7 +50,7 @@ export const CharactersContextProvider = (props: ProviderPropsType) => {
   const [characters, setCharacters] = useState<CharacterType[]>([
     {
       gender: "",
-      id: 0,
+      id: "",
       image: "",
       name: "",
       species: "",
@@ -84,7 +84,7 @@ export const CharactersContextProvider = (props: ProviderPropsType) => {
     setCharacters([
       {
         gender: "",
-        id: 0,
+        id: "",
         image: "",
         name: "",
         species: "",
